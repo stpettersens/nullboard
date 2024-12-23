@@ -1,0 +1,41 @@
+{
+  "name": "nullboard",
+  "version": "1.0.0",
+  "description": "A minimalist kanban board, focused on compactness and readibility + added support for serverside storage.",
+  "keywords": [
+    "minimalist",
+    "kanban",
+    "board",
+    "serverside",
+    "storage"
+  ],
+  "private": true,
+  "homepage": "https://github.com/stpettersens/nullboard#readme",
+  "bugs": {
+    "url": "https://github.com/stpettersens/nullboard/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stpettersens/nullboard.git"
+  },
+  "license": "BSD-2-Clause",
+  "author": "Alexander Pankratov",
+  "contributors": [
+    {
+      "name": "Sam Saint-Pettersen",
+      "url": "https://github.com/stpettersens"
+    }
+  ],
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "app": "node app.js",
+    "test": "echo !TODO"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "mocha": "^11.0.1"
+  }
+}
