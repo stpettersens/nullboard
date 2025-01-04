@@ -1,19 +1,23 @@
+# Dockerfile to run nullboard.
 FROM alpine:latest
 
-RUN apk update && apk add npm nodejs
+# Install required packages, tzdata, npm and nodejs.
+COPY apk_repositories.txt /etc/apk/respositories
+RUN apk update && apk add --no-cache tzdata npm nodejs
 RUN npm --version
 RUN nodejs --version
 
-RUN mkdir -p /usr/src/app/public
-WORKDIR /usr/src/app
+# Set timezone for container to Europe/London (GMT/BST).
+ENV TZ=Europe/London
+RUN date
 
-COPY package.json .
-COPY package-lock.json .
-COPY app.js .
-COPY
+RUN mkdir -p /opt/nullboard
+WORKDIR /opt/nullboard
+
+COPY .
 
 RUN npm install --production
 
-EXPOSE 8000
+EXPOSE 3001
 
 CMD [ "npm", "run", "app" ]

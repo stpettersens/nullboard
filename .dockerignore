@@ -1,0 +1,8 @@
+.git
+.gitignore
+.editorconfig
+node_modules
+images
+detect_py
+LICENSE
+Makefile

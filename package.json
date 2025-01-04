@@ -26,16 +26,21 @@
       "url": "https://github.com/stpettersens"
     }
   ],
-  "type": "commonjs",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "app": "node app.js",
+    "dev": "nodemon app.js",
     "test": "echo !TODO"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2"
   },
   "devDependencies": {
-    "mocha": "^11.0.1"
+    "mocha": "^11.0.1",
+    "nodemon": "^3.1.9"
   }
 }

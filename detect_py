@@ -1,0 +1,9 @@
+#!/bin/sh
+python3=$(whereis python3 | awk '{print $2 }')
+python=$(whereis python | awk '{print $2 }')
+
+if [ -z $python3 ]; then
+    echo $python
+else
+    echo $python3
+fi
